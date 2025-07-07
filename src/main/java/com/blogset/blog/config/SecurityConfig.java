@@ -76,7 +76,8 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowCredentials(true);
-        corsConfiguration.addAllowedOriginPattern("*"); // For development. Use your frontend URL in production.
+        corsConfiguration.addAllowedOriginPattern("http://localhost:3000");
+        corsConfiguration.addAllowedOriginPattern("https://blogsett.netlify.app");
         corsConfiguration.addAllowedHeader("*");        // Allow all headers
         corsConfiguration.addAllowedMethod("*");        // Allow all HTTP methods
         corsConfiguration.setMaxAge(3600L);
